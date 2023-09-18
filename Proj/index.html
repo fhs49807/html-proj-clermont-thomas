@@ -10,7 +10,6 @@
 
 
 <body>
-    <!-- Header -->
     <header>
         <nav>
             <div class="logo">
@@ -45,7 +44,6 @@
             const stockDataContainer = document.getElementById("stock-data-container");
 
             if (stockDataContainer) {
-                // Format the data as needed and set it as the innerHTML of the div
                 stockDataContainer.innerHTML = `
                     <h2>Stock Information</h2>
                     <p>Symbol: ${data.summary.stock}</p>
@@ -61,11 +59,10 @@
                 // Handle the API response data
                 const responseData = response.data;
 
-                // Update the stock data in the HTML
+                // Update stock data
                 updateStockData(responseData);
             })
             .catch(function (error) {
-                // Handle any errors that occur during the request
                 console.error(error);
             });
     </script>
