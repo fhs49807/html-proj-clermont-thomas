@@ -1,7 +1,75 @@
 <!DOCTYPE html>
+<html lang="en">
+
 
 <head>
-    <body>
-        <h2>Hello World</h2>
-    </body>
+    <meta charset="UTF-8">
+    <title>Stock Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Stock Tracker</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Stocks</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="stock-info">
+            <h2>Stock Information</h2>
+            <div id="stock-data-container"></div>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2023 Stock Tracker</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // Function to update the stock data in the HTML element
+        function updateStockData(data) {
+            const stockDataContainer = document.getElementById("stock-data-container");
+
+            if (stockDataContainer) {
+                // Format the data as needed and set it as the innerHTML of the div
+                stockDataContainer.innerHTML = `
+                    <h2>Stock Information</h2>
+                    <p>Symbol: ${data.summary.stock}</p>
+                    <p>Price: ${data.summary.price}</p>
+                    <!-- Add more data here as needed -->
+                `;
+            }
+        }
+
+        // Make a GET request to SerpApi
+        axios.get(`https://serpapi.com/search.json?engine=google_finance&q=GOOG:NASDAQ&api_key=6b4642820b7101e067eaf933dfe26bcc8629dbfb7f41e9cea9947cb7e6e7da2d`)
+            .then(function (response) {
+                // Handle the API response data
+                const responseData = response.data;
+
+                // Update the stock data in the HTML
+                updateStockData(responseData);
+            })
+            .catch(function (error) {
+                // Handle any errors that occur during the request
+                console.error(error);
+            });
+    </script>
+
+
+</body>
+</html>
