@@ -10,14 +10,27 @@ const callback = function(response) {
     console.log(data); 
     
     const stockDataContainer = document.getElementById("stock-data-container");
+    const newsFeedContainer = document.getElementById("news-feed-container");
+
 
     if (stockDataContainer) {
     
         stockDataContainer.innerHTML = `
-            <h2>Stock Information</h2>
+            
             <p>Symbol: ${data.summary.stock}</p>
             <p>Price: ${data.summary.price}</p>
-            <!-- Add more data here as needed -->
+        `;
+        newsFeedContainer.innerHTML = `
+            <h2>News Feed</h2>
+            <ul>
+                ${data.news_results.map(newsItem => `
+                    <li>
+                        <h3>${newsItem.title}</h3>
+                        <p>Source: ${newsItem.source}</p>
+                        <p>Date: ${newsItem.date}</p>
+                    </li>
+                `).join('')}
+            </ul>
         `;
     }
 };

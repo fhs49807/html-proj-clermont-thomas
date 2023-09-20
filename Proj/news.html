@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Stock Tracker</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="watchlist.html">Watchlist</a></li>
+                <li><a href="charts.html">Charts</a></li>
+            </ul>
+            <a href="login.html">
+                <button class="button button1">Login</button>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <h4> News </h4>
+        <p>Latest news articles<br>
+            Market analysis</p>
+
+            <section class="news-feed">
+                <h2>News Feed</h2>
+                <!-- Placeholder for news data -->
+                <div id="news-feed-container"></div>
+            </section>
+    </main>
+
+
+    <footer>
+        <p>Stock Tracker</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // Function to update the news data in the HTML element
+        function updateNewsData(news) {
+            const newsDataContainer = document.getElementById("news-data-container");
+
+            if (newsDataContainer) {
+                let newsHtml = '';
+                news.forEach(item => {
+                    newsHtml += `
+                        <h3>Title: ${item.title}</h3>
+                        <p>Source: ${item.source}</p>
+                        <p>Date: ${item.date}</p>
+                        <hr>
+                    `;
+                });
+                newsDataContainer.innerHTML = newsHtml;
+            }
+        }
+
+        // Make a GET request to SerpApi for news data
+        axios.get(`https://serpapi.com/search.json?engine=google_finance_news&q=GOOG:NASDAQ&api_key=6b4642820b7101e067eaf933dfe26bcc8629dbfb7f41e9cea9947cb7e6e7da2d`)
+            .then(function (response) {
+                // Handle the API response data for news data
+                const newsData = response.data.news_results;
+
+                // Update news data
+                updateNewsData(newsData);
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+    </script>
+
+</body>
+</html>

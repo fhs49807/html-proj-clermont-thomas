@@ -4,7 +4,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Stock Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stock Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,11 +17,15 @@
                 <h1>Stock Tracker</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Stocks</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="watchlist.html">Watchlist</a></li>
+                <li><a href="charts.html">Charts</a></li>
             </ul>
+            <a href="login.html">
+                <button class="button button1">Login</button>
+            </a>
         </nav>
     </header>
 
@@ -33,7 +38,7 @@
 
 
     <footer>
-        <p>&copy; 2023 Stock Tracker</p>
+        <p>Stock Tracker</p>
     </footer>
 
 
@@ -45,10 +50,10 @@
 
             if (stockDataContainer) {
                 stockDataContainer.innerHTML = `
-                    <h2>Stock Information</h2>
                     <p>Symbol: ${data.summary.stock}</p>
                     <p>Price: ${data.summary.price}</p>
-                    <!-- Add more data here as needed -->
+                    
+                    
                 `;
             }
         }
