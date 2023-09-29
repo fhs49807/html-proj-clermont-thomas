@@ -1,42 +1,33 @@
-const axios = require('axios');
+function updateStockData(stockData, stockElementId) {
+    const stockElement = document.getElementById(stockElementId);
+
+    if (stockElement) {
+        stockElement.innerHTML = `
+            <img src="images/${stockData.summary.stock.toLowerCase()}_logo.png">
+            <div>
+                <h3>${stockData.summary.price}</h3>
+                <p>${stockData.summary.stock}</p>
+            </div>
+        `;
+    }
+}
+
+function fetchStockData(stockSymbol, apiKey, stockElementId) {
+    const apiUrl = `https://serpapi.com/search.json?engine=google_finance&q=${stockSymbol}:NASDAQ&api_key=${apiKey}`;
+
+    axios.get(apiUrl)
+        .then(function (response) {
+            const stockData = response.data;
+
+            updateStockData(stockData, stockElementId);
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
+}
 
 const apiKey = "6b4642820b7101e067eaf933dfe26bcc8629dbfb7f41e9cea9947cb7e6e7da2d";
 
-const apiUrl = `https://serpapi.com/search.json?engine=google_finance&q=GOOG:NASDAQ&api_key=6b4642820b7101e067eaf933dfe26bcc8629dbfb7f41e9cea9947cb7e6e7da2d`;
-
-const callback = function(response) {
-    const data = response.data;
-
-    console.log(data); 
-    
-    const stockDataContainer = document.getElementById("stock-data-container");
-    const newsFeedContainer = document.getElementById("news-feed-container");
-
-
-    if (stockDataContainer) {
-    
-        stockDataContainer.innerHTML = `
-            
-            <p>Symbol: ${data.summary.stock}</p>
-            <p>Price: ${data.summary.price}</p>
-        `;
-        newsFeedContainer.innerHTML = `
-            <h2>News Feed</h2>
-            <ul>
-                ${data.news_results.map(newsItem => `
-                    <li>
-                        <h3>${newsItem.title}</h3>
-                        <p>Source: ${newsItem.source}</p>
-                        <p>Date: ${newsItem.date}</p>
-                    </li>
-                `).join('')}
-            </ul>
-        `;
-    }
-};
-
-axios.get(apiUrl)
-    .then(callback)
-    .catch(function (error) {
-        console.error(error);
-    });
+fetchStockData("GOOG", apiKey, "google-stock");
+fetchStockData("AMZN", apiKey, "amazon-stock");
+fetchStockData("META", apiKey, "meta-stock");

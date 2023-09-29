@@ -11,6 +11,7 @@
 
 
 <body>
+    
     <header>
         <nav>
             <div class="logo">
@@ -37,6 +38,48 @@
             add or remove stocks from the portfolio.</p>
         
     </main>
+
+    
+    <!-- <main>
+        <section class="stock-info">
+            <h2>Stock Information</h2>
+            <div id="stock-data-container"></div>
+        </section>
+    </main> -->
+
+
+ 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // Function to update the stock data in the HTML element
+        function updateStockData(data) {
+            const stockDataContainer = document.getElementById("stock-data-container");
+
+            if (stockDataContainer) {
+                stockDataContainer.innerHTML = `
+                    <p>Symbol: ${data.summary.stock}</p>
+                    <p>Price: ${data.summary.price}</p>
+                    
+                    
+                `;
+            }
+        }
+
+        // Make a GET request to SerpApi
+        axios.get(`https://serpapi.com/search.json?engine=google_finance&q=GOOG:NASDAQ&api_key=6b4642820b7101e067eaf933dfe26bcc8629dbfb7f41e9cea9947cb7e6e7da2d`)
+            .then(function (response) {
+                // Handle the API response data
+                const responseData = response.data;
+
+                // Update stock data
+                updateStockData(responseData);
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+    </script>
 
 
     <footer>
