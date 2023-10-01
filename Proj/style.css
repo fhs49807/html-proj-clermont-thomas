@@ -1,24 +1,28 @@
-.container{
-   
-    height: 100%;
-        /*background-image: url(images/background.png);
-        background-size: 100% 100%;
-        padding: 0 7%;
-        color: #fff; */
-        padding: 0 7%;
-        background-color: rgb(22, 22, 22);
-    }
+.container {
 
-    html, body {
-        height: 100%; 
-    }
-    
-body{
+    height: 100%;
+    padding: 0 7%;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(22, 22, 22);
+}
+
+body {
     display: flex;
     flex-direction: column;
+    font-family: "Verdana", sans-serif;
 
-} 
-body, h1, h2, p {
+}
+
+body,
+h1,
+h2,
+p {
     margin: auto 0;
     padding: auto 0;
 }
@@ -33,23 +37,27 @@ nav {
     align-items: center;
 }
 
-.logo{
+.logo {
     width: 100px;
     height: 100px;
     cursor: pointer;
 }
-nav ul{
+
+nav ul {
     flex: 1;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     margin: 10px 20px;
 }
-nav ul li a{
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
 }
-nav .btn{
+
+nav .btn {
     margin-right: 20px;
     color: #fff;
     text-decoration: none;
@@ -58,31 +66,34 @@ nav .btn{
     border-radius: 20px;
     transition-duration: 0.4s;
 }
-nav .btn:hover{
+
+nav .btn:hover {
     background-color: white;
-    color:  black;
+    color: black;
     text-decoration: none;
     border: 1px solid #fff;
     padding: 10px 30px;
     border-radius: 20px;
 }
 
-.mainStuff{
+.mainStuff {
     font-family: "Verdana", sans-serif;
     color: #fff;
     margin-top: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.mainStuff h1{
+
+.mainStuff h1 {
     font-size: 90px;
     margin-bottom: 15px;
-    
+
 }
-.mainStuff .btn{
+
+.mainStuff .btn {
     margin-top: 20px;
     color: #fff;
     text-decoration: none;
@@ -91,9 +102,10 @@ nav .btn:hover{
     border-radius: 20px;
     transition-duration: 0.4s;
 }
-.mainStuff .btn:hover{
+
+.mainStuff .btn:hover {
     background-color: white;
-    color:  black;
+    color: black;
     text-decoration: none;
     border: 1px solid #fff;
     padding: 10px 30px;
@@ -101,10 +113,10 @@ nav .btn:hover{
 }
 
 #stock-data-container-main {
-    
-    padding: 20px; 
-    border-radius: 5px; 
-   
+
+    padding: 20px;
+    border-radius: 5px;
+
 }
 
 .stock-info {
@@ -121,25 +133,27 @@ nav .btn:hover{
 }
 
 #stock-data-container {
-    
+
     margin-top: 10%;
-    text-align: center; 
-    padding: 20px; 
-    border-radius: 5px; 
-   
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+
 }
 
-footer{
+footer {
     color: #fff;
 }
-.stock-list-bottom{
+
+.stock-list-bottom {
     position: absolute;
     right: 10%;
     bottom: 50px;
     display: flex;
     align-items: center;
 }
-.stock-bottom{
+
+.stock-bottom {
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -149,7 +163,45 @@ footer{
     padding: 10px 30px;
     border-radius: 8px;
 }
-.stock-bottom img{
+
+.stock-bottom img {
     width: 40px;
     margin-right: 10px;
+}
+
+
+#reddit-wallstreetbets-stocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.stock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.stock-item {
+    text-align: center;
+    margin-right: 40px;
+}
+
+.stock-item h3 {
+    font-weight: bold;
+    color: rgb(247, 221, 183);
+}
+
+h2 {
+    font-size: 60px;
+    text-align: center;
+    background-color: rgb(22, 22, 22);
+    color: rgb(251, 194, 110);
 }

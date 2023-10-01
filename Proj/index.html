@@ -5,17 +5,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Stock Tracker</title>
+    <title>Stock Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
     <div class="container">
-    
+
         <nav>
             <a href="index.html"><img src="images/logo.png" class="logo"></a>
-            
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
@@ -25,49 +25,49 @@
             </ul>
             <a href="login.html" class="btn">Login</a>
         </nav>
-    
 
-    <div class="mainStuff">
-        <h1>Stock Website</h1>
-        <p>Look at portolio, news, watchlist and charts!</p>
-        <a href="portfolio.html" class="btn">SEE MORE</a>
-    
-    </div>
 
-    
+        <div class="mainStuff">
+            <h2>Stock Website</h2>
+            <p><br>Look at portolio, news, watchlist and charts!<br><br><br><br><br><br></p>
+            <a href="portfolio.html" class="btn">SEE MORE</a>
 
-    <footer>
-        <div class="stock-list-bottom">
-            <div class="stock-bottom" id="google-stock">
-                <img src="images/google_logo.png">
-                <div>
-                    <h3>$$</h3>
-                    <p>Google</p>
-                </div>
-            </div>
-            <div class="stock-bottom" id="amazon-stock">
-                <img src="images/amazon_logo.png">
-                <div>
-                    <h3>$$</h3>
-                    <p>Amazon</p>
-                </div>
-            </div>
-            <div class="stock-bottom" id="meta-stock">
-                <img src="images/meta_logo.png">
-                <div>
-                    <h3>$$</h3>
-                    <p>Meta</p>
-                </div>
-            </div>
         </div>
-    </footer>
-    
 
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="script.js"></script>
 
-</div>
+        <footer>
+            <div class="stock-list-bottom">
+                <div class="stock-bottom" id="google-stock">
+                    <img src="images/google_logo.png">
+                    <div>
+                        <h3>$$</h3>
+                        <p>Google</p>
+                    </div>
+                </div>
+                <div class="stock-bottom" id="amazon-stock">
+                    <img src="images/amazon_logo.png">
+                    <div>
+                        <h3>$$</h3>
+                        <p>Amazon</p>
+                    </div>
+                </div>
+                <div class="stock-bottom" id="meta-stock">
+                    <img src="images/meta_logo.png">
+                    <div>
+                        <h3>$$</h3>
+                        <p>Meta</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="googleFinanceAPI.js"></script>
+
+    </div>
 </body>
 
 </html>

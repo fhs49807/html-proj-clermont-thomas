@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
-    <header>
+    <div class="container">
         <nav>
-            <div class="logo">
-                <h1>Stock Tracker</h1>
-            </div>
+            <a href="index.html"><img src="images/logo.png" class="logo"></a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
@@ -23,62 +19,29 @@
                 <li><a href="watchlist.html">Watchlist</a></li>
                 <li><a href="charts.html">Charts</a></li>
             </ul>
-            <a href="login.html">
-                <button class="button button1">Login</button>
-            </a>
+            <a href="login.html" class="btn">Login</a>
         </nav>
-    </header>
 
-    <main>
-        <h4> News </h4>
-        <p>Latest news articles<br>
-            Market analysis</p>
+        <div class="mainStuff">
+            <h2>Reddit Wallstreetbets Top Stocks</h2>
+            <p>Get top 50 stocks discussed on Reddit subreddit Wallstreetbets<br><br><br><br><br><br><br></p>
+        </div>
+        <main>
+            <section class="stocks-list">
 
-            <section class="news-feed">
-                <h2>News Feed</h2>
-                <!-- Placeholder for news data -->
-                <div id="news-feed-container"></div>
+                <div id="reddit-wallstreetbets-stocks"></div>
             </section>
-    </main>
+        </main>
+    </div>
 
 
-    <footer>
-        <p>Stock Tracker</p>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="redditWallstreetbets.js"></script>
+
     <script>
-        // Function to update the news data in the HTML element
-        function updateNewsData(news) {
-            const newsDataContainer = document.getElementById("news-data-container");
-
-            if (newsDataContainer) {
-                let newsHtml = '';
-                news.forEach(item => {
-                    newsHtml += `
-                        <h3>Title: ${item.title}</h3>
-                        <p>Source: ${item.source}</p>
-                        <p>Date: ${item.date}</p>
-                        <hr>
-                    `;
-                });
-                newsDataContainer.innerHTML = newsHtml;
-            }
-        }
-
-        // Make a GET request to SerpApi for news data
-        axios.get(`https://serpapi.com/search.json?engine=google_finance_news&q=GOOG:NASDAQ&api_key=6b4642820b7101e067eaf933dfe26bcc8629dbfb7f41e9cea9947cb7e6e7da2d`)
-            .then(function (response) {
-                // Handle the API response data for news data
-                const newsData = response.data.news_results;
-
-                // Update news data
-                updateNewsData(newsData);
-            })
-            .catch(function (error) {
-                console.error(error);
-            });
+        fetchRedditWallstreetbetsStockData('', 'reddit-wallstreetbets-stocks');
     </script>
-
 </body>
+
 </html>
