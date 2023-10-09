@@ -8,6 +8,7 @@ Thomas Clermont
 - [x] flowchart
 - [x] mockups
 - [x] Mindestens 5 seiten
-- [ ] clientseitige programmierung in relevantem ausmas (komplexe visualisierungen, datenaggregation, processing, etc.)
-
-
+- [ ] charts.html
+- [ ] watchlist.html
+- [ ] login backend
+- [ ] portfolio -> save entered stocks somewhere
