@@ -9,7 +9,7 @@ function updateRedditStockData(redditStockData, redditStockElementId) {
             index === self.findIndex((s) => s.ticker === stock.ticker)
         );
 
-        for (let i = 0; i < Math.min(uniqueStockData.length, 48); i += 3) {
+        for (let i = 0; i < Math.min(uniqueStockData.length, 50); i += 3) {
             const stockSet = uniqueStockData.slice(i, i + 3);
 
             const rowContainer = document.createElement("div");

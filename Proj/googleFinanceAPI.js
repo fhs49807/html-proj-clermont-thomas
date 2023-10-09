@@ -3,17 +3,19 @@ function updateStockData(stockData, stockElementId) {
 
     if (stockElement) {
         stockElement.innerHTML = `
-            <img src="images/${stockData.summary.stock.toLowerCase()}_logo.png">
+            <img src="images/${stockData.data[0].ticker.toLowerCase()}_logo.png">
             <div>
-                <h3>${stockData.summary.price}</h3>
-                <p>${stockData.summary.stock}</p>
+                <h3>${stockData.data[0].name}</h3>
+                <p>Price: ${stockData.data[0].price}</p>
+                <p>Day High: ${stockData.data[0].day_high}</p>
+                <p>Day Low: ${stockData.data[0].day_low}</p>
             </div>
         `;
     }
 }
 
 function fetchStockData(stockSymbol, apiKey, stockElementId) {
-    const apiUrl = `https://serpapi.com/search.json?engine=google_finance&q=${stockSymbol}:NASDAQ&api_key=${apiKey}`;
+    const apiUrl = `https://api.stockdata.org/v1/data/quote?symbols=${stockSymbol}&api_token=${apiKey}`;
 
     axios.get(apiUrl)
         .then(function (response) {
@@ -26,7 +28,7 @@ function fetchStockData(stockSymbol, apiKey, stockElementId) {
         });
 }
 
-const apiKey = "6b4642820b7101e067eaf933dfe26bcc8629dbfb7f41e9cea9947cb7e6e7da2d";
+const apiKey = "MzXWBRjue1fixo9pvPhGbmHogh57dOPAmEitmEZJ";
 
 fetchStockData("GOOG", apiKey, "google-stock");
 fetchStockData("AMZN", apiKey, "amazon-stock");

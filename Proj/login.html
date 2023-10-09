@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loginStyle.css">
 </head>
 
 
 <body>
-    <header>
+    <div class="container">
+
         <nav>
-            <div class="logo">
-                <h1>Stock Tracker</h1>
-            </div>
+            <a href="index.html"><img src="images/logo.png" class="logo"></a>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
@@ -23,22 +24,28 @@
                 <li><a href="watchlist.html">Watchlist</a></li>
                 <li><a href="charts.html">Charts</a></li>
             </ul>
-            <a href="login.html">
-                <button class="button button1">Login</button>
-            </a>
+            <a href="login.html" class="btn">Login</a>
         </nav>
-    </header>
-
-    <main>
-        <h4>Login</h4>
-        <p>username/email and password<br>
-            "Forgot Password" and "Sign-Up" </p>
-    </main>
 
 
-    <footer>
-        <p>Stock Tracker</p>
-    </footer>
+        <div class="mainStuff">
+            <h2>Login</h2>
 
+            
+            <form id="loginForm">
+            
+                <label id="loginFormUsername" for="username">Username</label>
+                <input type="text" placeholder="Email or Phone" id="username">
+        
+                <label id="loginFormPassword" for="password">Password</label>
+                <input type="password" placeholder="Password" id="password">
+        
+                <button>Log In</button>
+                
+            </form>
+        </div>
+
+    </div>
 </body>
+
 </html>
