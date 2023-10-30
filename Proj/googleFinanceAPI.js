@@ -6,9 +6,9 @@ function updateStockData(stockData, stockElementId) {
             <img src="images/${stockData.data[0].ticker.toLowerCase()}_logo.png">
             <div>
                 <h3>${stockData.data[0].name}</h3>
-                <p>Price: ${stockData.data[0].price}</p>
-                <p>Day High: ${stockData.data[0].day_high}</p>
-                <p>Day Low: ${stockData.data[0].day_low}</p>
+                <p>Price: $${stockData.data[0].price}</p>
+                <p>Day High: $${stockData.data[0].day_high}</p>
+                <p>Day Low: $${stockData.data[0].day_low}</p>
             </div>
         `;
     }
