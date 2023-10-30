@@ -68,6 +68,41 @@
 }
 
 
+
+/* --------------------------------------------------------------------------- */
+
+#portfolioStockList {   /*portfolio stock items list*/
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end; 
+    text-align: center;
+}
+
+#portfolioStockList li {  /*individual list items*/
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 10px;
+}
+
+#portfolioStockList li h3 {  /*header in list*/
+    font-weight: bold;
+    color: rgb(247, 221, 183);
+    margin: 10px 0; 
+}
+
+#portfolioStockList li img {  /*size image/logo in list*/
+    width: 50px;
+    padding: 20px;
+}
+
+#portfolioStockList li p {  /*paragraph in list*/
+    margin: 0; 
+}
+
+
 /* --------------------------------------------------------------------------- */
 
 

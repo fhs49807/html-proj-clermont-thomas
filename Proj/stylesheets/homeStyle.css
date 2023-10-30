@@ -67,29 +67,44 @@ footer {
     color: #fff;
 }
 
+/* Apply centering to the container */
 .stock-list-bottom {
     display: flex;
+    align-items: flex-end;
+    justify-content: center;
     position: absolute;
-    left: 50%;
     bottom: 20px;
-    transform: translateX(-50%) translateY(-50%);
-    }
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+/* Apply centering and vertical layout to each item */
 .stock-bottom {
+    flex-direction: column;
     display: flex;
     align-items: center;
     font-size: 14px;
-    margin: 0 15px;
     color: #fff;
-    border: 1px solid #fff;
     padding: 5px 20px;
-    border-radius: 8px;
+    text-align: center; /* Center text horizontally */
+    justify-self: flex-end;
 }
 
+/* Style the heading within each item */
+.stock-bottom h3 {
+    font-weight: bold;
+    color: rgb(247, 221, 183);
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+/* Apply styling to images */
 .stock-bottom img {
     width: 40px;
     margin-right: 2%;
 }
+
+
+
 
 /* --------------------------------------------------------------------------- */
 

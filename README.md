@@ -13,4 +13,5 @@ Thomas Clermont
 - [ ] maybe remove watchlist page
 - [ ] charts page: add stock input and add chart for entered stock name
 - [ ] make login page functional (no database)
+- [ ] maybe remove login function because no point as other pages are accessible anyway
 

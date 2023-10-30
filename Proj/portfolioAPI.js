@@ -1,6 +1,7 @@
 const apiKey = "MzXWBRjue1fixo9pvPhGbmHogh57dOPAmEitmEZJ";
 
 const stockSearchForm = document.querySelector(".stockSearch");
+const portfolioStockList = document.getElementById("portfolioStockList");
 
 stockSearchForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -11,33 +12,35 @@ stockSearchForm.addEventListener("submit", function (e) {
     fetchStockData(stockName);
 });
 
-function updateStockData(stockData, stockElementId) {
-    const stockElement = document.getElementById(stockElementId);
+function createStockListItem(stockData) {
+    const listItem = document.createElement("li");
+    listItem.className = "portfolioStockItem";
 
-    if (stockElement) {
-        stockElement.innerHTML = `
-            <div class="portfolioStockContainer">
-                <img src="images/${stockData.data[0].ticker.toLowerCase()}_logo.png">
-                <div>
-                    <h3>${stockData.data[0].name}</h3>
-                    <p>Price: ${stockData.data[0].price}</p>
-                    <p>Day High: ${stockData.data[0].day_high}</p>
-                    <p>Day Low: ${stockData.data[0].day_low}</p>
-                </div>
-            </div>
-        `;
-    }
+    listItem.innerHTML = `
+        <img src="images/${stockData.data[0].ticker.toLowerCase()}_logo.png">
+        <div>
+            <h3>${stockData.data[0].name}</h3>
+            <p>Price: ${stockData.data[0].price}</p>
+            <p>Day High: ${stockData.data[0].day_high}</p>
+            <p>Day Low: ${stockData.data[0].day_low}</p>
+        </div>
+    `;
+
+    portfolioStockList.appendChild(listItem);
+}
+
+function updateStockData(stockData) {
+    createStockListItem(stockData);
 }
 
 function fetchStockData(stockName) {
-    const stockElementId = "portfolioStockData";
     const apiUrl = `https://api.stockdata.org/v1/data/quote?symbols=${stockName}&api_token=${apiKey}`;
 
     axios.get(apiUrl)
         .then(function (response) {
             const stockData = response.data;
 
-            updateStockData(stockData, stockElementId);
+            updateStockData(stockData);
         })
         .catch(function (error) {
             console.error(error);

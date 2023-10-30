@@ -33,3 +33,5 @@ const apiKey = "MzXWBRjue1fixo9pvPhGbmHogh57dOPAmEitmEZJ";
 fetchStockData("GOOG", apiKey, "google-stock");
 fetchStockData("AMZN", apiKey, "amazon-stock");
 fetchStockData("META", apiKey, "meta-stock");
+fetchStockData("TSLA", apiKey, "tesla-stock");
+fetchStockData("aapl", apiKey, "apple-stock");
