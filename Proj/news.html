@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Tracker</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="newsStyle.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/newsStyle.css">
 </head>
 
 <body> 
@@ -35,14 +35,9 @@
         </main>
     </div>
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="redditWallstreetbets.js"></script>
+    <script>fetchRedditWallstreetbetsStockData('', 'reddit-wallstreetbets-stocks');</script>
 
-    <script>
-        fetchRedditWallstreetbetsStockData('', 'reddit-wallstreetbets-stocks');
-    </script>
 </body>
-
 </html>
