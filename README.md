@@ -7,6 +7,7 @@ Thomas Clermont
 - [x] schriftliche projektbeschreibung
 - [x] flowchart
 - [x] mockups
+- [ ] maybe add scroll bar to homea page (from git repo)
 - [ ] add some type of storage on portfolio page (functionality to add multiple stocks to )
 - [ ] on news page fix bottom articles in a row
 - [ ] maybe remove watchlist page
