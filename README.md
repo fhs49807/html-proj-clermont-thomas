@@ -7,8 +7,9 @@ Thomas Clermont
 - [x] schriftliche projektbeschreibung
 - [x] flowchart
 - [x] mockups
-- [x] Mindestens 5 seiten
-- [ ] charts.html
-- [ ] watchlist.html
-- [ ] login backend
-- [ ] portfolio -> save entered stocks somewhere
+- [ ] add some type of storage on portfolio page (functionality to add multiple stocks to )
+- [ ] on news page fix bottom articles in a row
+- [ ] maybe remove watchlist page
+- [ ] charts page: add stock input and add chart for entered stock name
+- [ ] make login page functional (no database)
+
