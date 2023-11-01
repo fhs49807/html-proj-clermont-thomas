@@ -1,0 +1,119 @@
+.chartStuff {
+    font-family: "Verdana", sans-serif;
+    color: #fff;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chartStuff .btn {
+    margin-top: 25px;
+    width: 100%;
+    color: #ffffff;
+    background-color: rgb(22, 22, 22);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+}
+
+.chartStuff .btn:hover {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+#stockName {
+    width: 250px;
+    height: 50px;
+    margin-top: 5px;
+}
+
+.chartStockContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.chartStockContainer img {
+    width: 40px;
+    margin-right: 2%;
+}
+
+.chartStockContainer div {
+    flex: 1;
+}
+
+.chartStockContainer h3 {
+    font-weight: bold;
+    color: rgb(247, 221, 183);
+    margin: 0;
+}
+
+.chartStockContainer p {
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------- */
+
+#chartStockList { /*chart stock items list*/
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: center;
+}
+
+#chartStockList li { /*individual list items*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#chartStockList li h3 { /*header in list*/
+    font-weight: bold;
+    color: rgb(247, 221, 183);
+    margin: 10px 0;
+}
+
+#chartStockList li img { /*size image/logo in list*/
+    width: 50px;
+    padding: 20px;
+}
+
+#chartStockList li p { /*paragraph in list*/
+    margin: 0;
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+
+form *{
+    font-family: 'Poppins',sans-serif;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+
+input{
+    display: block;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+}

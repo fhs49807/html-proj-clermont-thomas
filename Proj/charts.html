@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +7,10 @@
     <link rel="stylesheet" href="./stylesheets/style.css">
     <link rel="stylesheet" href="./stylesheets/chartsStyle.css">
 </head>
-
-
 <body>
-    <header>
+    <div class="container">
         <nav>
-            <div class="logo">
-                <h1>Stock Tracker</h1>
-            </div>
+            <a href="index.html"><img src="images/logo.png" class="logo"></a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
@@ -24,22 +18,18 @@
                 <li><a href="watchlist.html">Watchlist</a></li>
                 <li><a href="charts.html">Charts</a></li>
             </ul>
-            <a href="login.html">
-                <button class="button button1">Login</button>
-            </a>
+            <a href="login.html" class="btn">Login</a>
         </nav>
-    </header>
-
-    <main>
-        <h4> Charts </h4>
-        <p> Interactive price charts with  timeframes (daily, weekly, monthly).<br>
-            Candlestick or line charts for individual stocks.</p>
-            </main>
-
-
-    <footer>
-        <p>Stock Tracker</p>
-    </footer>
-
+        <div class="chartStuff">
+            <h2>Charts</h2>
+            <p>Search for stocks and view stock charts.<br><br><br><br></p>
+            <form class="stockSearch">
+                <input type="text" id="stockName" name="stockName" placeholder="Stock Name" style="color: white">
+                <button type="submit" class="btn">View Chart</button>
+            </form>
+            <!-- <canvas id="stockChart" width="600" height="400"></canvas> -->
+        </div>
+        <script src="chartAPI.js"></script>
+    </div>
 </body>
 </html>
