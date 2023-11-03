@@ -1,5 +1,4 @@
 .chartStuff {
-    font-family: "Verdana", sans-serif;
     color: #fff;
     margin-top: 5%;
     display: flex;
@@ -33,7 +32,7 @@
 }
 
 #stockName {
-    width: 250px;
+    width: 360px;
     height: 50px;
     margin-top: 5px;
 }
@@ -102,9 +101,8 @@
 
 
 form *{
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Verdana',sans-serif;
     letter-spacing: 0.5px;
-    outline: none;
     border: none;
 }
 
@@ -116,4 +114,33 @@ input{
     padding: 0 10px;
     font-size: 14px;
     font-weight: 300;
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+.dateInput {
+    display: flex;
+}
+
+.dateInput label {
+    flex: 1; 
+    margin-top: 20px;
+}
+
+#startDate{
+    color: white;
+    display: flex;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#endDate{
+    color: white;
+    display: flex;
+    margin-top: 20px;
+}
+
+#stockChart{
+    margin-bottom: 100px;
 }

@@ -1,9 +1,11 @@
+//API implementation of https://www.stockdata.org/
+
 const apiKey = "MzXWBRjue1fixo9pvPhGbmHogh57dOPAmEitmEZJ";
 
-const stockSearchForm = document.querySelector(".stockSearch");
-const portfolioStockList = document.getElementById("portfolioStockList");
+const stockSearchForm = document.querySelector(".stockSearch");//user input
+const portfolioStockList = document.getElementById("portfolioStockList");//stock list
 
-stockSearchForm.addEventListener("submit", function (e) {
+stockSearchForm.addEventListener("submit", function (e) {//once button is pressed --> get user input
     e.preventDefault();
 
     const stockNameInput = document.getElementById("stockName");
@@ -12,6 +14,7 @@ stockSearchForm.addEventListener("submit", function (e) {
     fetchStockData(stockName);
 });
 
+//Update <ul id="portfolioStockList"></ul> with real-time stock data from API
 function createStockListItem(stockData) {
     const listItem = document.createElement("li");
     listItem.className = "portfolioStockItem";
@@ -33,6 +36,7 @@ function updateStockData(stockData) {
     createStockListItem(stockData);
 }
 
+//fetch stock data from API
 function fetchStockData(stockName) {
     const apiUrl = `https://api.stockdata.org/v1/data/quote?symbols=${stockName}&api_token=${apiKey}`;
 

@@ -1,3 +1,8 @@
+//API implementation of https://www.stockdata.org/
+
+const apiKey = "MzXWBRjue1fixo9pvPhGbmHogh57dOPAmEitmEZJ";
+
+//Update <div class="stock-list-bottom"> with real-time stock data from API
 function updateStockData(stockData, stockElementId) {
     const stockElement = document.getElementById(stockElementId);
 
@@ -14,6 +19,8 @@ function updateStockData(stockData, stockElementId) {
     }
 }
 
+
+//fetch stock data from API
 function fetchStockData(stockSymbol, apiKey, stockElementId) {
     const apiUrl = `https://api.stockdata.org/v1/data/quote?symbols=${stockSymbol}&api_token=${apiKey}`;
 
@@ -28,7 +35,8 @@ function fetchStockData(stockSymbol, apiKey, stockElementId) {
         });
 }
 
-const apiKey = "MzXWBRjue1fixo9pvPhGbmHogh57dOPAmEitmEZJ";
+
+
 
 fetchStockData("GOOG", apiKey, "google-stock");
 fetchStockData("AMZN", apiKey, "amazon-stock");
