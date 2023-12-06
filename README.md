@@ -2,8 +2,8 @@
 
 Thomas Clermont
 
-
 ## Checklist:
+
 - [x] schriftliche projektbeschreibung
 - [x] flowchart
 - [x] mockups
@@ -15,4 +15,4 @@ Thomas Clermont
 - [ ] Die Navbar ist nicht schlecht gelungen - bei mobilen Geräten ist ein Hamburger-Menü dennoch zu bevorzugen, um Platz zu sparen. Hier eine Hilfestellung für eine saubere Lösung: https://alvarotrigo.com/blog/hamburger-menu-css-responsive/
 - [ ] Die stock-list-bottom sollte auf kleinen Screens untereinander anstatt nebeneinander angezeigt werden, um den overflow auf der x-Achse zu vermeiden. Zudem ist die Überlagerung der Inhalte etwas unschön. Entweder die absolute/fixe Positionierung auflösen oder das Element mit einem Hintergrund versehen, sodass die dahinterliegenden Elemente wirklich "verschwinden"
 - [ ] Die Charts sollten die Screenbreite nicht überschreiten
-
+- [ ] PHP login functionality

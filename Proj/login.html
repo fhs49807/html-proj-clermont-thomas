@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stock Tracker</title>
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <link rel="stylesheet" href="./stylesheets/loginStyle.css">
-</head>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="./stylesheets/loginStyle.css" />
+  </head>
 
-
-<body>
+  <body>
     <div class="container">
+      <nav>
+        <a href="index.html"><img src="images/logo.png" class="logo" /></a>
 
-        <nav>
-            <a href="index.html"><img src="images/logo.png" class="logo"></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="charts.html">Charts</a></li>
+        </ul>
+        <a href="login.html" class="btn">Login</a>
+      </nav>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="watchlist.html">Watchlist</a></li>
-                <li><a href="charts.html">Charts</a></li>
-            </ul>
-            <a href="login.html" class="btn">Login</a>
-        </nav>
+      <div class="mainStuff">
+        <h2>Login</h2>
 
+        <form id="loginForm">
+          <label id="loginFormUsername" for="username">Username</label>
+          <input
+            type="text"
+            placeholder="Email or Phone"
+            id="username"
+            style="color: white"
+          />
 
-        <div class="mainStuff">
-            <h2>Login</h2>
+          <label id="loginFormPassword" for="password">Password</label>
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            style="color: white"
+          />
 
-            
-            <form id="loginForm">
-            
-                <label id="loginFormUsername" for="username">Username</label>
-                <input type="text" placeholder="Email or Phone" id="username" style="color: white;">
-        
-                <label id="loginFormPassword" for="password">Password</label>
-                <input type="password" placeholder="Password" id="password" style="color: white;">
-        
-                <a href="" class="btnLoginPage">Login</a>
-                                
-            </form>
-        </div>
+          <a href="" class="btnLoginPage">Login</a>
+        </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>

@@ -1,133 +1,147 @@
 .mainStuff {
-    font-family: "Verdana", sans-serif;
-    color: #fff;
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  font-family: "Verdana", sans-serif;
+  color: #fff;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .mainStuff h1 {
-    font-size: 90px;
-    margin-bottom: 15px;
-
+  font-size: 90px;
+  margin-bottom: 15px;
 }
 
 .mainStuff .btn {
-    margin-top: 20px;
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 10px 30px;
-    border-radius: 20px;
-    transition-duration: 0.4s;
+  margin-top: 20px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  border-radius: 20px;
+  transition-duration: 0.4s;
 }
 
 .mainStuff .btn:hover {
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 10px 30px;
-    border-radius: 20px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  border-radius: 20px;
 }
 /* --------------------------------------------------------------------------- */
+
 #stock-data-container-main {
-
-    padding: 20px;
-    border-radius: 5px;
-
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .stock-info {
-    height: 200px;
-    background-color: #787878;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  background-color: #787878;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .stock-data {
-    color: #828282;
-    font-size: 18px;
+  color: #828282;
+  font-size: 18px;
 }
 
 #stock-data-container {
-
-    margin-top: 10%;
-    text-align: center;
-    padding: 20px;
-    border-radius: 5px;
-
+  margin-top: 10%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 footer {
-    color: #fff;
+  color: #fff;
 }
 
-.stock-list-bottom { /* container */
+@media screen and (min-width: 900px) {
+  .stock-list-bottom {
+    /* container */
     display: flex;
     align-items: flex-end;
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-}
+  }
 
-
-.stock-bottom { /* each item */
+  .stock-bottom {
+    /* each item */
     flex-direction: column;
     display: flex;
     align-items: center;
     font-size: 14px;
     color: #fff;
     padding: 10px 20px;
-    text-align: center; 
+    text-align: center;
     justify-self: flex-end;
+  }
 }
 
-
-.stock-bottom h3 { /* each item h3 */
-    font-weight: bold;
-    color: rgb(247, 221, 183);
-    margin: 5px 50px; 
+.stock-bottom h3 {
+  /* each item h3 */
+  font-weight: bold;
+  color: rgb(247, 221, 183);
+  margin: 5px 50px;
 }
 
-
-.stock-bottom img { /* images */
-    width: 40px;
-    margin-right: 2%;
+.stock-bottom img {
+  /* images */
+  width: 40px;
+  margin-right: 2%;
 }
-
-
-
 
 /* --------------------------------------------------------------------------- */
 
 .stock-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
 .stock-item {
-    text-align: center;
-    margin-right: 40px;
+  text-align: center;
+  margin-right: 40px;
 }
 
 .stock-item h3 {
-    font-weight: bold;
-    color: rgb(247, 221, 183);
+  font-weight: bold;
+  color: rgb(247, 221, 183);
 }
 
 h2 {
-    font-size: 60px;
-    text-align: center;
-    background-color: rgb(22, 22, 22);
-    color: rgb(251, 194, 110);
+  font-size: 60px;
+  text-align: center;
+  background-color: rgb(22, 22, 22);
+  color: rgb(251, 194, 110);
 }
 /* --------------------------------------------------------------------------- */
 
+@media screen and (max-width: 900px) {
+  .stock-list-bottom {
+    margin-top: 50px;
+    flex-direction: column; /* Change to a column layout for smaller screens */
+    align-items: center; /* Center align items in the column */
+    display: flex;
+  }
+
+  .stock-bottom {
+    margin-bottom: 10px; /* Add some space between each item in the column */
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    justify-self: flex-end;
+  }
+}

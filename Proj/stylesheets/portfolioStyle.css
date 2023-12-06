@@ -1,124 +1,120 @@
 .portfolioStuff {
-    font-family: "Verdana", sans-serif;
-    color: #fff;
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  font-family: "Verdana", sans-serif;
+  color: #fff;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .portfolioStuff .btn {
-
-    margin-top: 25px;
-    width: 100%;
-    color: #ffffff;
-    background-color: rgb(22, 22, 22);
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 16px;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 10px;
-    border-radius: 20px;
-    transition-duration: 0.4s;
+  margin-top: 25px;
+  width: 100%;
+  color: #ffffff;
+  background-color: rgb(22, 22, 22);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 20px;
+  transition-duration: 0.4s;
 }
 
-
 .portfolioStuff .btn:hover {
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 10px 30px;
-    border-radius: 20px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  border-radius: 20px;
 }
 
 #stockName {
-    width: 250px;
-    height: 50px;
-    margin-top: 5px;
-
+  width: 250px;
+  height: 50px;
+  margin-top: 5px;
 }
 .portfolioStockContainer {
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .portfolioStockContainer img {
-    width: 40px;
-    margin-right: 2%;
+  width: 40px;
+  margin-right: 2%;
 }
 
 .portfolioStockContainer div {
-    flex: 1;
+  flex: 1;
 }
 
 .portfolioStockContainer h3 {
-    font-weight: bold;
-    color: rgb(247, 221, 183);
-    margin: 0;
+  font-weight: bold;
+  color: rgb(247, 221, 183);
+  margin: 0;
 }
 
 .portfolioStockContainer p {
-    margin: 0;
+  margin: 0;
 }
-
-
 
 /* --------------------------------------------------------------------------- */
 
-#portfolioStockList {   /*portfolio stock items list*/
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;  
-    text-align: center;
+#portfolioStockList {
+  /*portfolio stock items list*/
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: center;
 }
 
-#portfolioStockList li {  /*individual list items*/
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    padding: 10px;
+#portfolioStockList li {
+  /*individual list items*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
-#portfolioStockList li h3 {  /*header in list*/
-    font-weight: bold;
-    color: rgb(247, 221, 183);
-    margin: 10px 0; 
+#portfolioStockList li h3 {
+  /*header in list*/
+  font-weight: bold;
+  color: rgb(247, 221, 183);
+  margin: 10px 0;
 }
 
-#portfolioStockList li img {  /*size image/logo in list*/
-    width: 50px;
-    padding: 20px;
+#portfolioStockList li img {
+  /*size image/logo in list*/
+  width: 50px;
+  padding: 20px;
 }
 
-#portfolioStockList li p {  /*paragraph in list*/
-    margin: 0; 
+#portfolioStockList li p {
+  /*paragraph in list*/
+  margin: 0;
 }
-
 
 /* --------------------------------------------------------------------------- */
 
-
-form *{
-    font-family: 'Poppins',sans-serif;
-    letter-spacing: 0.5px;
-    outline: none;
-    border: none;
+form * {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
 }
 
-
-input{
-    display: block;
-    background-color: rgba(255,255,255,0.07);
-    border-radius: 3px;
-    padding: 0 10px;
-    font-size: 14px;
-    font-weight: 300;
+input {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 300;
 }

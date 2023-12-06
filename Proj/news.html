@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stock Tracker</title>
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <link rel="stylesheet" href="./stylesheets/newsStyle.css">
-</head>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="./stylesheets/newsStyle.css" />
+  </head>
 
-<body> 
+  <body>
     <div class="container">
-        <nav>
-            <a href="index.html"><img src="images/logo.png" class="logo"></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="watchlist.html">Watchlist</a></li>
-                <li><a href="charts.html">Charts</a></li>
-            </ul>
-            <a href="login.html" class="btn">Login</a>
-        </nav>
+      <nav>
+        <a href="index.html"><img src="images/logo.png" class="logo" /></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="charts.html">Charts</a></li>
+        </ul>
+        <a href="login.html" class="btn">Login</a>
+      </nav>
 
-        <div class="mainStuff">
-            <h2>Reddit Wallstreetbets Top Stocks</h2>
-            <p>Get top 50 stocks discussed on Reddit subreddit Wallstreetbets<br><br><br><br><br><br><br></p>
-        </div>
-        <main>
-            <section class="stocks-list">
-
-                <div id="reddit-wallstreetbets-stocks"></div>
-            </section>
-        </main>
+      <div class="mainStuff">
+        <h2>Reddit Wallstreetbets Top Stocks</h2>
+        <p>
+          Get top 50 stocks discussed on Reddit subreddit Wallstreetbets<br /><br /><br /><br /><br /><br /><br />
+        </p>
+      </div>
+      <main>
+        <section class="stocks-list">
+          <div id="reddit-wallstreetbets-stocks"></div>
+        </section>
+      </main>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="redditWallstreetbets.js"></script>
-    <script>fetchRedditWallstreetbetsStockData('', 'reddit-wallstreetbets-stocks');</script>
-
-</body>
+    <script>
+      fetchRedditWallstreetbetsStockData("", "reddit-wallstreetbets-stocks");
+    </script>
+  </body>
 </html>

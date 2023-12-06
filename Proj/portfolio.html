@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stock Tracker</title>
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <link rel="stylesheet" href="./stylesheets/portfolioStyle.css">
-</head>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="./stylesheets/portfolioStyle.css" />
+  </head>
 
-
-<body>
+  <body>
     <div class="container">
+      <nav>
+        <a href="index.html"><img src="images/logo.png" class="logo" /></a>
 
-        <nav>
-            <a href="index.html"><img src="images/logo.png" class="logo"></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="charts.html">Charts</a></li>
+        </ul>
+        <a href="login.html" class="btn">Login</a>
+      </nav>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="watchlist.html">Watchlist</a></li>
-                <li><a href="charts.html">Charts</a></li>
-            </ul>
-            <a href="login.html" class="btn">Login</a>
-        </nav>
- 
+      <div class="portfolioStuff">
+        <h2>Portfolio</h2>
+        <p>Search for stocks and add to portfolio.<br /><br /><br /><br /></p>
 
-        <div class="portfolioStuff">
-            <h2>Portfolio</h2>
-            <p>Search for stocks and add to portfolio.<br><br><br><br></p>
+        <form class="stockSearch">
+          <input
+            type="text"
+            id="stockName"
+            name="stockName"
+            placeholder="Stock Name"
+            style="color: white"
+          />
+          <button type="submit" class="btn">Add</button>
+        </form>
 
-            <form class="stockSearch">
-                <input type="text" id="stockName" name="stockName" placeholder="Stock Name" style="color: white">
-                <button type="submit" class="btn">Add</button>
-            </form>
+        <ul id="portfolioStockList"></ul>
+      </div>
 
-            <ul id="portfolioStockList"></ul>
-
-        </div>
-
- 
-
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="portfolioAPI.js"></script>
-
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="portfolioAPI.js"></script>
     </div>
-</body>
-
+  </body>
 </html>

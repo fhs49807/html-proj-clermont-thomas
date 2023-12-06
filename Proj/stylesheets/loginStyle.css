@@ -1,55 +1,54 @@
 .mainStuff {
-    font-family: "Verdana", sans-serif;
-    color: #fff;
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  font-family: "Verdana", sans-serif;
+  color: #fff;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* --------------------------------------------------------------------------- */
 
-form *{
-    outline: none;
-    border: none;
+form * {
+  outline: none;
+  border: none;
 }
 
-
-label{
-    display: block;
-    margin-top: 30px;
-    font-size: 16px;
+label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
 }
-input{
-    display: block;
-    height: 50px;
-    width: 425px;
-    background-color: rgba(255,255,255,0.07);
-    border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
-    margin-bottom: 40px;
-    font-size: 14px;
-    font-weight: 300;
+input {
+  display: block;
+  height: 50px;
+  width: 425px;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-weight: 300;
 }
 /* button */
-    .btnLoginPage {
-        width: 100px;
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 10px 190px;
-    border-radius: 20px;
-    transition-duration: 0.4s;
+.btnLoginPage {
+  width: 100px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px 190px;
+  border-radius: 20px;
+  transition-duration: 0.4s;
 }
 
 /* Hover effect for buttons */
-    .btnLoginPage:hover {
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 10px 190px;
-    border-radius: 20px;
-} 
+.btnLoginPage:hover {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px 190px;
+  border-radius: 20px;
+}
