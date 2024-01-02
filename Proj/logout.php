@@ -1,6 +1,6 @@
-<!-- Check if a user is logged in. If yes destroy session. -->
-
 <?php
+// Check if a user is logged in. If yes destroy session.
+
 session_start();
 
 // check if user is logged in

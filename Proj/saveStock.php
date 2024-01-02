@@ -1,6 +1,5 @@
-<!-- Check if user is logged in. Read user input stock name if not empty. Insert username and stock name into "userstocks" table in DB -->
-
 <?php
+// Check if user is logged in. Read user input stock name if not empty. Insert username and stock name into "userstocks" table in DB
 
 session_start();
 

@@ -1,6 +1,6 @@
-<!-- check if session has "username". If yes, encode username into JSON. Otherwise username = null. -->
-
 <?php
+// check if session has "username". If yes, encode username into JSON. Otherwise username = null.
+
 session_start();
 
 if(isset($_SESSION['username'])) { // session has username?

@@ -1,6 +1,6 @@
-<!-- Handle login form submission. Connect to MySQL database using host, username, password. -->
-
 <?php
+// Handle login form submission. Connect to MySQL database using host, username, password.
+
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { // if login form has been submitted with username and password

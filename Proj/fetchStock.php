@@ -1,6 +1,6 @@
-<!--  If "username" exists, connect to MySQL database. Retrieve list of stock IDs associated with "username" -->
-
 <?php
+// If "username" exists, connect to MySQL database. Retrieve list of stock IDs associated with "username" 
+
 session_start();
 
 // check if sesstion is logged in
