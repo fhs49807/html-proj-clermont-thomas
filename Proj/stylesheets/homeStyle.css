@@ -128,15 +128,17 @@ h2 {
 /* --------------------------------------------------------------------------- */
 
 @media screen and (max-width: 900px) {
+  /* full list */
   .stock-list-bottom {
     margin-top: 50px;
-    flex-direction: column; /* Change to a column layout for smaller screens */
-    align-items: center; /* Center align items in the column */
+    flex-direction: column;
+    align-items: center;
     display: flex;
   }
 
+  /* one item in list */
   .stock-bottom {
-    margin-bottom: 10px; /* Add some space between each item in the column */
+    margin-bottom: 10px;
     align-items: center;
     font-size: 14px;
     color: #fff;

@@ -6,7 +6,7 @@ const stockSearchForm = document.querySelector(".stockSearch"); //user input
 const portfolioStockList = document.getElementById("portfolioStockList"); //stock list
 
 stockSearchForm.addEventListener("submit", function (e) {
-  //once button is pressed --> get user input
+  //once button is pressed --> get user input (name of stock)
   e.preventDefault();
 
   const stockNameInput = document.getElementById("stockName");

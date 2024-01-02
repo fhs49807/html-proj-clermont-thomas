@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Tracker</title>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="./stylesheets/homeStyle.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <a href="indexLoggedIn.html"
+          ><img src="images/logo.png" class="logo"
+        /></a>
+
+        <ul class="nav-links">
+          <li><a href="indexLoggedIn.html">Home</a></li>
+          <li><a href="portfolioLoggedIn.html">Portfolio</a></li>
+          <li><a href="newsLoggedIn.html">News</a></li>
+          <li><a href="chartsLoggedIn.html">Charts</a></li>
+        </ul>
+        <a href="logout.php" class="btn">Logout</a>
+      </nav>
+
+      <div class="mainStuff">
+        <h2>Stock Website</h2>
+        <p>
+          <br />Look at portolio, news, watchlist and charts!<br /><br /><br /><br /><br />
+        </p>
+        <a href="portfolio.html" class="btn">SEE MORE</a>
+      </div>
+
+      <footer>
+        <div class="stock-list-bottom">
+          <div class="stock-bottom" id="google-stock">
+            <img src="images/goog_logo.png" />
+            <div>
+              <h3>$$$</h3>
+              <p>Google</p>
+            </div>
+          </div>
+          <div class="stock-bottom" id="amazon-stock">
+            <img src="images/amzn_logo.png" />
+            <div>
+              <h3>$$$</h3>
+              <p>Amazon</p>
+            </div>
+          </div>
+          <div class="stock-bottom" id="meta-stock">
+            <img src="images/meta_logo.png" />
+            <div>
+              <h3>$$$</h3>
+              <p>Meta</p>
+            </div>
+          </div>
+          <div class="stock-bottom" id="tesla-stock">
+            <img src="images/tsla_logo.png" />
+            <div>
+              <h3>$$$</h3>
+              <p>Tesla</p>
+            </div>
+          </div>
+          <div class="stock-bottom" id="apple-stock">
+            <img src="images/aapl_logo.png" />
+            <div>
+              <h3>$$$</h3>
+              <p>Apple</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="googleFinanceAPI.js"></script>
+    </div>
+  </body>
+</html>

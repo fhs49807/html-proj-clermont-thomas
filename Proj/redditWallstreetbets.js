@@ -1,6 +1,8 @@
 //https://tradestie.com/apps/reddit/api/
 
-//update <div id="reddit-wallstreetbets-stocks"></div> with daily wall-street-bets news data
+// update <div id="reddit-wallstreetbets-stocks"></div> with daily wall-street-bets news data
+// code from api creators website
+
 function updateRedditStockData(redditStockData, redditStockElementId) {
   const redditStockElement = document.getElementById(redditStockElementId);
 

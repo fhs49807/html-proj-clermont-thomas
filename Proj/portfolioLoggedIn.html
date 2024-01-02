@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Tracker</title>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="./stylesheets/portfolioStyle.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <a href="index.html"><img src="images/logo.png" class="logo" /></a>
+
+        <ul class="nav-links">
+          <li><a href="indexLoggedIn.html">Home</a></li>
+          <li><a href="portfolioLoggedIn.html">Portfolio</a></li>
+          <li><a href="newsLoggedIn.html">News</a></li>
+          <li><a href="chartsLoggedIn.html">Charts</a></li>
+        </ul>
+        <a href="logout.php" class="btn">Logout</a>
+      </nav>
+
+      <div class="portfolioStuff">
+        <h2>Portfolio</h2>
+        <p>
+          <br />Searched Stocks are added to your personal portfolio and tied to
+          your username.<br /><br /><br />
+        </p>
+
+        <form class="stockSearch">
+          <input
+            type="text"
+            id="stockName"
+            name="stockName"
+            placeholder="Stock Name"
+            style="color: white"
+          />
+          <button type="submit" class="btn">Add</button>
+        </form>
+
+        <ul id="portfolioStockList"></ul>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="portfolioAPILoggedIn.js"></script>
+    </div>
+  </body>
+</html>

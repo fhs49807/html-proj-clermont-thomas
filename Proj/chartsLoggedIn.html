@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Tracker</title>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="./stylesheets/chartsStyle.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <a href="indexLoggedIn.html"
+          ><img src="images/logo.png" class="logo"
+        /></a>
+        <ul class="nav-links">
+          <li><a href="indexLoggedIn.html">Home</a></li>
+          <li><a href="portfolioLoggedIn.html">Portfolio</a></li>
+          <li><a href="newsLoggedIn.html">News</a></li>
+          <li><a href="chartsLoggedIn.html">Charts</a></li>
+        </ul>
+        <a href="logout.php" class="btn">Logout</a>
+      </nav>
+      <div class="chartStuff">
+        <h2>Charts</h2>
+        <p>Search for stocks and view stock charts.<br /><br /><br /><br /></p>
+        <form class="stockSearch">
+          <input
+            type="text"
+            id="stockName"
+            name="stockName"
+            placeholder="Stock Name"
+            style="color: white"
+          />
+
+          <div class="dateInput">
+            <label for="startDate">From:</label>
+            <input
+              type="date"
+              id="startDate"
+              name="trip-start"
+              value="2023-05-01"
+              min="2021-01-01"
+              max="2023-11-01"
+            />
+            <label for="endDate">To:</label>
+            <input
+              type="date"
+              id="endDate"
+              name="trip-end"
+              value="2023-11-01"
+              min="2021-01-01"
+              max="2023-11-01"
+            />
+          </div>
+          <button type="button" id="viewChartButton" class="btn">
+            View Chart
+          </button>
+        </form>
+
+        <div>
+          <canvas id="stockChart"></canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.1/dist/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0"></script>
+        <script src="https://www.chartjs.org/chartjs-chart-financial/chartjs-chart-financial.js"></script>
+        <script src="chartAPI.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

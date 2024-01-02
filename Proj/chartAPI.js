@@ -3,6 +3,8 @@
 const apiKey = "cmOvv0Op_hvdJaeluOzYPN0UZA3VE8v4";
 
 //fetch historical stock data from API
+// ---------------------------------------------------------------------------
+
 function fetchHistoricalStockData(stockName, startDate, endDate) {
   const apiUrl = `https://api.polygon.io/v2/aggs/ticker/${stockName}/range/1/day/${startDate}/${endDate}?unadjusted=false&apiKey=${apiKey}`;
 
@@ -32,6 +34,7 @@ function fetchHistoricalStockData(stockName, startDate, endDate) {
     });
 }
 
+// display stock chart when button pressen & get user input
 // ---------------------------------------------------------------------------
 
 const element = document.getElementById("viewChartButton");
@@ -49,6 +52,7 @@ function getUserInput() {
   const endDateInput = document.getElementById("endDate");
   const endDate = endDateInput.value;
 
+  // create candlestick chart based on data & check if a chart already exists and removes it before creating new one
   // ---------------------------------------------------------------------------
 
   function drawChart() {

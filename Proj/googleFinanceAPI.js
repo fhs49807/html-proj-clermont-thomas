@@ -8,7 +8,7 @@ function updateStockData(stockData, stockElementId) {
 
   if (stockElement) {
     stockElement.innerHTML = `
-            <img src="images/${stockData.data[0].ticker.toLowerCase()}_logo.png">
+            <img src="images/${stockData.data[0].ticker.toLowerCase()}_logo.png"> 
             <div>
                 <h3>${stockData.data[0].name}</h3>
                 <p>Price: $${stockData.data[0].price}</p>
@@ -35,6 +35,7 @@ function fetchStockData(stockSymbol, apiKey, stockElementId) {
     });
 }
 
+// default stocks for showcase on home page
 fetchStockData("GOOG", apiKey, "google-stock");
 fetchStockData("AMZN", apiKey, "amazon-stock");
 fetchStockData("META", apiKey, "meta-stock");

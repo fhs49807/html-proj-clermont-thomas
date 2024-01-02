@@ -118,3 +118,29 @@ input {
   font-size: 14px;
   font-weight: 300;
 }
+
+/* --------------------------------------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+  /* full list */
+  #portfolioStockList {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+
+  /* one item on list */
+  #portfolioStockList li {
+    margin-bottom: 10px;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    margin-right: 40px;
+  }
+  p {
+    text-align: center;
+  }
+}
