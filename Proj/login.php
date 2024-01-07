@@ -1,7 +1,7 @@
 <?php
 // Handle login form submission. Connect to MySQL database using host, username, password.
 
-session_start();
+session_start(); //start session to track login status
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { // if login form has been submitted with username and password
     $username = $_POST['username'];
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // if login form has been submitted 
 
     // check if the provided username and password match database
     $stmt = $conn->prepare("SELECT * FROM logindata WHERE Username = ? AND Password = ?");
-    $stmt->bind_param("ss", $username, $password);
+    $stmt->bind_param("ss", $username, $password); //"ss" --> (string, string)
 
     $stmt->execute();
     $result = $stmt->get_result();

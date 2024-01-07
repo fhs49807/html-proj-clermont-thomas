@@ -6,7 +6,7 @@ session_start();
 // check if user is logged in
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']) {
     
-    $_SESSION = array();
+    $_SESSION = array();  //empty session array to clear all sessions open
 
     session_destroy(); // destroy session
 }

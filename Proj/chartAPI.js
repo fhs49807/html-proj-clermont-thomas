@@ -34,7 +34,7 @@ function fetchHistoricalStockData(stockName, startDate, endDate) {
     });
 }
 
-// display stock chart when button pressen & get user input
+// display stock chart when button pressed & get user input
 // ---------------------------------------------------------------------------
 
 const element = document.getElementById("viewChartButton");
